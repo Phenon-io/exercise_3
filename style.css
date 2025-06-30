@@ -1,0 +1,13 @@
+#grid {
+      display: grid;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(3, 50px);
+      gap: 5px;
+    }
+#clearToggle {
+  float:left;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
