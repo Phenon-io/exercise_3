@@ -2,20 +2,34 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Tic Tac Toe Accelerated</title>
+        <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="container">
-            <h1>Tic Tac Toe Accelerated</h1>
+            <h1>Tic Tac Toe</h1>
             <p>First to move moves twice for the first turn, click a square to choose your first position</p>
-            <p>Click start to let the computer move first</p>
+            <p>Choose between you and a friend: who is player one and player two?</p>
+            <p>Press start to flip a coin and decide if p1 or p2 is first to move</p>
+            <p>The first player to move will use O, the 2nd player will use X</p>
             <div id="grid">
                 <!-- Buttons Generated Here-->
             </div>
             <br>
-            <button id="clearToggle" onclick="startClear()"></button>
+            <button id="clearToggle" onclick="startClear()">Start</button>
+                <div id="diceModal" style="display:none; position:fixed; top:30%; left:30%; background:white; border:1px solid black; padding:20px;">
+                <p>Rolling dice to decide who goes first...</p>
+                <button onclick="rollDice()">Roll Dice</button>
+                <p id="diceResult"></p>
+            </div>
+
+        <!-- Turn Display -->
+        <p id="turnDisplay">Turn: -</p>
+
+        <!-- Undo Button -->
+        <button id="undoButton" onclick="undoMove()">Undo</button>
         </div>
+        
         <script src="script.js"></script>
     </body>
 </html>
